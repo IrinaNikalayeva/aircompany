@@ -8,9 +8,9 @@ public class MilitaryPlane extends Plane{
 
     private MilitaryType militaryType;
 
-    public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) {
+    public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType militaryType) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
-        this.militaryType = type;
+        this.militaryType = militaryType;
     }
 
     public MilitaryType getType() {
