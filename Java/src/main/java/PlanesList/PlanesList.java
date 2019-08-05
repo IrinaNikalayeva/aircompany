@@ -34,4 +34,9 @@ public class PlanesList {
         );
         return planes;
     }
+
+    public Plane createPlaneWithMaxPassengerCapacity(){
+        PassengerPlane planeWithMaxPassengerCapacity = new PassengerPlane("Boeing-747", 980, 16100, 70500, 242);
+        return planeWithMaxPassengerCapacity;
+    }
 }

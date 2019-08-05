@@ -12,9 +12,10 @@ import java.util.List;
 
 public class AirportTest {
 
-    private static PassengerPlane planeWithMaxPassengerCapacity = new PassengerPlane("Boeing-747", 980, 16100, 70500, 242);
+//    private static PassengerPlane planeWithMaxPassengerCapacity = new PassengerPlane("Boeing-747", 980, 16100, 70500, 242);
     PlanesList planesList = new PlanesList();
     List<Plane> planes = planesList.createPlanesList();
+    Plane planeWithMaxPassengerCapacity = planesList.createPlaneWithMaxPassengerCapacity();
 
     @Test
     public void testGetTransportMilitaryPlanes() {
