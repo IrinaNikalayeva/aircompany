@@ -16,10 +16,10 @@ public class Airport {
 
 
     public List<PassengerPlane> getPassengerPlane() {
-        List<? extends Plane> l = this.planes;
-        List<PassengerPlane> x = new ArrayList<>();
-        for (Plane p : l) {if (p instanceof PassengerPlane) {x.add((PassengerPlane) p);}}
-        return x;
+        List<? extends Plane> planes = this.planes;
+        List<PassengerPlane> passengerPlanes = new ArrayList<>();
+        for (Plane plane : planes) {if (plane instanceof PassengerPlane) {passengerPlanes.add((PassengerPlane) plane);}}
+        return passengerPlanes;
     }
 
     public List<MilitaryPlane> getMilitaryPlanes() {
@@ -89,8 +89,8 @@ public class Airport {
 
     public Airport sortByMaxDistance() {
         Collections.sort(planes, new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.GetMaxFlightDistance() - o2.GetMaxFlightDistance();
+            public int compare(Plane firstPlane, Plane secondPlane) {
+                return firstPlane.GetMaxFlightDistance() - secondPlane.GetMaxFlightDistance();
             }
         });
         return this;
@@ -103,8 +103,8 @@ public class Airport {
      */
     public Airport sortByMaxSpeed() {
         Collections.sort(planes, new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.getMaxSpeed() - o2.getMaxSpeed();
+            public int compare(Plane firstPlane, Plane secondPlane) {
+                return firstPlane.getMaxSpeed() - secondPlane.getMaxSpeed();
             }
         });
         return this;
@@ -112,8 +112,8 @@ public class Airport {
 
     public Airport sortByMaxLoadCapacity() {
         Collections.sort(planes, new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.getMinLoadCapacity() - o2.getMinLoadCapacity();
+            public int compare(Plane firstPlane, Plane secondPlane) {
+                return firstPlane.getMinLoadCapacity() - secondPlane.getMinLoadCapacity();
             }
         });
         return this;
