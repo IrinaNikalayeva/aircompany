@@ -11,9 +11,9 @@ import planes.Plane;
 import java.util.List;
 
 public class AirportTest {
-    
-    List<Plane> planes = PlanesList.createPlanesList();
-    Plane planeWithMaxPassengerCapacity = PlanesList.createPlaneWithMaxPassengerCapacity();
+
+    private static List<Plane> planes = PlanesList.createPlanesList();
+    private static Plane planeWithMaxPassengerCapacity = PlanesList.createPlaneWithMaxPassengerCapacity();
 
     @Test
     public void testGetTransportMilitaryPlanes() {
