@@ -22,7 +22,7 @@ public class AirportTest {
         List<MilitaryPlane> transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
         boolean isMilitary = false;
         for (MilitaryPlane militaryPlane : transportMilitaryPlanes) {
-            if ((militaryPlane.getType() == MilitaryType.TRANSPORT)) {
+            if (militaryPlane.getType() == MilitaryType.TRANSPORT) {
                 isMilitary = true;
                 break;
             }
@@ -62,7 +62,7 @@ public class AirportTest {
         List<MilitaryPlane> bomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
         boolean isBomber;
         for (MilitaryPlane militaryPlane : bomberMilitaryPlanes) {
-            if ((militaryPlane.getType() == MilitaryType.BOMBER)) {
+            if (militaryPlane.getType() == MilitaryType.BOMBER) {
                 isBomber = true;
                 Assert.assertTrue(isBomber);
             }
