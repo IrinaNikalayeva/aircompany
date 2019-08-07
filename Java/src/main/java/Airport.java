@@ -19,7 +19,6 @@ public class Airport {
 
 
     public List<PassengerPlane> getPassengerPlane() {
-        List<? extends Plane> planes = this.planes;
         List<PassengerPlane> passengerPlanes = new ArrayList<>();
         for (Plane plane : planes) {
             if (plane instanceof PassengerPlane) {
