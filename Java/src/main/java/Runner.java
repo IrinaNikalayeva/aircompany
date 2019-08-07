@@ -1,4 +1,4 @@
-import PlanesList.PlanesList;
+import data.PlanesList;
 import planes.Plane;
 
 import java.util.List;

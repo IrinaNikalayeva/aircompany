@@ -1,4 +1,4 @@
-import PlanesList.PlanesList;
+import data.PlanesList;
 import models.ClassificationLevel;
 import models.MilitaryType;
 import org.testng.Assert;

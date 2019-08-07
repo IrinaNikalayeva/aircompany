@@ -1,4 +1,4 @@
-package PlanesList;
+package data;
 
 import models.ClassificationLevel;
 import models.ExperimentalTypes;
