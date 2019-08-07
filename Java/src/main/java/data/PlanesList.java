@@ -13,7 +13,7 @@ import java.util.List;
 
 public class PlanesList {
 
-    public List<Plane> createPlanesList(){
+    public static List<Plane> createPlanesList(){
                 List<Plane> planes = Arrays.asList(
                 new PassengerPlane("Boeing-737", 900, 12000, 60500, 164),
                 new PassengerPlane("Boeing-737-800", 940, 12300, 63870, 192),
@@ -35,7 +35,7 @@ public class PlanesList {
         return planes;
     }
 
-    public Plane createPlaneWithMaxPassengerCapacity(){
+    public static Plane createPlaneWithMaxPassengerCapacity(){
         PassengerPlane planeWithMaxPassengerCapacity = new PassengerPlane("Boeing-747", 980, 16100, 70500, 242);
         return planeWithMaxPassengerCapacity;
     }
