@@ -47,7 +47,7 @@ public class Airport {
         }
         return experimentalPlanes;
     }
-    
+
     public PassengerPlane getPassengerPlaneWithMaxPassengersCapacity() {
         List<PassengerPlane> passengerPlanes = getPassengerPlane();
         PassengerPlane planeWithMaxCapacity = passengerPlanes.get(0);
@@ -87,7 +87,7 @@ public class Airport {
     public Airport sortByMaxDistance() {
         Collections.sort(planes, new Comparator<Plane>() {
             public int compare(Plane firstPlane, Plane secondPlane) {
-                return firstPlane.GetMaxFlightDistance() - secondPlane.GetMaxFlightDistance();
+                return firstPlane.getMaxFlightDistance() - secondPlane.getMaxFlightDistance();
             }
         });
         return this;
