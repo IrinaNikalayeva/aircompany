@@ -17,6 +17,9 @@ public class Airport {
         this.planes = planes;
     }
 
+    public List<? extends Plane> getPlanes() {
+        return planes;
+    }
 
     public List<PassengerPlane> getPassengerPlane() {
         List<PassengerPlane> passengerPlanes = new ArrayList<>();
@@ -111,9 +114,6 @@ public class Airport {
         return this;
     }
 
-    public List<? extends Plane> getPlanes() {
-        return planes;
-    }
 
     private void print(Collection<? extends Plane> collection) {
         Iterator<? extends Plane> iterator = collection.iterator();
