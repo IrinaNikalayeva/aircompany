@@ -3,6 +3,7 @@ package planes;
 import java.util.Objects;
 
 abstract public class Plane {
+
     String model;
     private int maxSpeed;
     private int maxFlightDistance;
@@ -23,11 +24,11 @@ abstract public class Plane {
         return maxSpeed;
     }
 
-    public int GetMaxFlightDistance() {
+    public int getMaxFlightDistance() {
         return maxFlightDistance;
     }
 
-    public int getMinLoadCapacity() {
+    public int getMaxLoadCapacity() {
         return this.maxLoadCapacity;
     }
 
@@ -35,22 +36,26 @@ abstract public class Plane {
     @Override
     public String toString() {
         return "Plane{" +
-                "model='" + model + '\'' +
-                ", maxSpeed=" + maxSpeed +
-                ", maxFlightDistance=" + maxFlightDistance +
-                ", maxLoadCapacity=" + maxLoadCapacity +
-                '}';
+               "model='" + model + '\'' +
+               ", maxSpeed=" + maxSpeed +
+               ", maxFlightDistance=" + maxFlightDistance +
+               ", maxLoadCapacity=" + maxLoadCapacity +
+               '}';
     }
 
     @Override
     public boolean equals(Object object) {
-        if (this == object) return true;
-        if (!(object instanceof Plane)) return false;
+        if (this == object) {
+            return true;
+        }
+        if (!(object instanceof Plane)) {
+            return false;
+        }
         Plane plane = (Plane) object;
         return maxSpeed == plane.maxSpeed &&
-                maxFlightDistance == plane.maxFlightDistance &&
-                maxLoadCapacity == plane.maxLoadCapacity &&
-                Objects.equals(model, plane.model);
+               maxFlightDistance == plane.maxFlightDistance &&
+               maxLoadCapacity == plane.maxLoadCapacity &&
+               Objects.equals(model, plane.model);
     }
 
     @Override
